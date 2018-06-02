@@ -1,0 +1,22 @@
+<ion-content  class="login-wrapper">
+  <form #loginForm="ngForm" (ngSubmit)="signin()">
+    <ion-list>
+      <h4 class="project-name">TDR管理及归档、出版一体化平台</h4>
+      <ion-item>
+        <ion-label >用户名</ion-label>
+        <ion-input type="text" name="accountName" [(ngModel)]="accountName" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label >密码</ion-label>
+        <ion-input type="password" name="password" [(ngModel)]="password" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>记住密码</ion-label>
+        <ion-checkbox color="secondary" name="isSavePassword" [(ngModel)]="isSavePassword" ></ion-checkbox>
+      </ion-item>
+    </ion-list>
+    <div padding>
+      <button type="submit" ion-button color="primary" block [disabled]="loginForm.invalid">登录</button>
+    </div>
+
+</ion-content>

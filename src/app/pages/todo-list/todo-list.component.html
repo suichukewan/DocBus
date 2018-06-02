@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons start>
+      <button ion-button icon-only color="royal" (click)="goBack();">
+        <ion-icon name="arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>待办清单</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only color="royal">
+        <ion-icon name="md-reorder"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-list inset>
+    <ion-item *ngFor="let item of todoLists" routerLink="/navs">
+      <h2 >{{item.title}}</h2>
+      <h3>{{item.name}}</h3>
+      <p class="time">{{item.time}}</p>
+    </ion-item>
+  </ion-list>
+</ion-content>

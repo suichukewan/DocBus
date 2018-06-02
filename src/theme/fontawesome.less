@@ -1,0 +1,20 @@
+@import '~@fortawesome/fontawesome-free-webfonts/less/_variables';
+@import '~@fortawesome/fontawesome-free-webfonts/less/fa-solid';
+
+ion-icon {
+  &[class*='ion-ios-fa'],
+  &[class*='ion-md-fa']
+  {
+    &:extend(.fa);
+  }
+}
+
+& {
+  @fa-css-prefix: ion-ios-fa;
+  @import (multiple) '~@fortawesome/fontawesome-free-webfonts/less/_icons';
+}
+
+& {
+  @fa-css-prefix: ion-md-fa;
+  @import (multiple) '~@fortawesome/fontawesome-free-webfonts/less/_icons';
+}
